@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FlashingNumbers</string>
+    <string name="sum_of_nums">Sum: </string>
+</resources>

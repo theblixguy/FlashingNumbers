@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mainViewModel"
+            type="com.suyashsrijan.flashingnumbers.main.viewmodel.MainViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.view.MainActivity">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(0, number, "1.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeActionId="200"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(0))}"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/editText4"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Number 1" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(1, number, "2.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeActionId="300"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(1))}"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/editText5"
+            app:layout_constraintTop_toBottomOf="@+id/editText1"
+            tools:text="Number 2" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(2, number, "3.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeActionId="400"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(2))}"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/editText6"
+            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            tools:text="Number 3" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(3, number, "4.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeActionId="500"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(3))}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Number 4" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(4, number, "5.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeActionId="600"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(4))}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText4"
+            tools:text="Number 5" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:afterTextChanged='@{(number) -> mainViewModel.updateNumber(5, number, "6.0")}'
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text="@{String.valueOf(mainViewModel.getNumberForIndex(5))}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText5"
+            tools:text="Number 6" />
+
+        <TextView
+            android:id="@+id/textViewSum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/sum_of_nums"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewSumValue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textViewSumValue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSumValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="@{(view) -> mainViewModel.toggleFlashing(view)}"
+            android:padding="10dp"
+            android:text="@{mainViewModel.sumOfNumbers}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:isFlashing="@{safeUnbox(mainViewModel.flashSum)}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
