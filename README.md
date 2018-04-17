@@ -1,6 +1,6 @@
 # FlashingNumbers
 
-This is an app I built as part of the interview process for a certain company. This app is written purely in **Kotlin** and uses **Dagger 2** for dependency injection, **Android Architecture Components** to manage ViewModel lifecycle, and **KotlinTest** for unit testing. The app built with *MVVM* plus **Data Binding**.
+This is an app I built as part of the interview process for a certain company. This app is written purely in **Kotlin** and uses **Dagger 2** for dependency injection, **Android Architecture Components** to manage ViewModel lifecycle, and **KotlinTest** for unit testing. The app built with **MVVM** plus **Data Binding**.
 
 ## Main requirements
 
